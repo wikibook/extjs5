@@ -1,0 +1,13 @@
+{ "entitys": [
+    {
+        "email": "guest@mail.com",
+        "userSeq": 20,
+        "userName": "Guest",
+        "success": 1,
+        "password": "",
+        "ipAddress": "127.0.0.1",
+        "roleId": 6
+    }
+], "errMsg": "",
+    "errTitle": "",
+    "message": "", "success": true }

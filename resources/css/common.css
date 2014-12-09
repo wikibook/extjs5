@@ -1,0 +1,329 @@
+@charset "utf-8";
+.button-icon-film {
+    background-image: url(../images/icons/png/Film.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-display {
+    background-image: url(../images/icons/png/Display.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-move {
+    background-image: url(../images/icons/png/Move.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-trackback {
+    background-image: url(../images/icons/png/Trackback.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-exit {
+    background-image: url(../images/icons/png/Exit.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-home {
+    background-image: url(../images/icons/png/Home.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-component {
+    background-image: url(../images/icons/png/Component.png);
+    background-repeat: no-repeat;
+}
+
+.button-icon-help {
+    background-image: url(../images/icons/png/Helpbook.png);
+    background-repeat: no-repeat;
+}
+
+/*이하 데시보드 */
+.custom-container-body {
+    border: 1px solid #9BA0AF;
+    border-top: 2px solid #9BA0AF;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    background: #ffffff;
+}
+
+.custom-container-header {
+    height: 25px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.custom-container-header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-left: -1px
+}
+
+.custom-container-header li {
+    float: left;
+    background-color: #f1f2f2;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    margin-right: 2px;
+}
+
+.custom-container-header li a {
+    border: 1px solid #9BA0AF;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    display: block;
+    padding: 3px 20px 4px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    color: #888;
+    text-decoration: none;
+}
+
+.custom-container-header li a {
+    float: none
+}
+
+.custom-container-header li a:hover {
+    color: #3b73b9
+}
+
+.custom-container-header li.current {
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+
+    background: #c1c3c5;
+    background: -webkit-linear-gradient(top, #c1c3c5 0%, #9ba0af 100%);
+
+}
+
+.custom-container-header li.current a {
+    color: #fff;
+}
+
+.target-report {
+    margin: 5px 0px;
+}
+
+.target-report-item {
+    margin-bottom: 7px;
+    margin-right: 7px;
+    border: 1px solid #bcbec0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.target-report-item-header {
+    height: 28px;
+    width: 100%;
+    background: #f1f2f2;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #bcbec0;
+}
+
+.target-report-item-header h3 {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+    float: left;
+    padding: 5px 10px 0 5px
+}
+
+.target-report-item-header h3 a {
+    color: #666;
+    display: block;
+    text-decoration: none;
+}
+
+.target-report-item-header h3 a:hover {
+    color: #333;
+}
+
+.target-report-item-header span {
+    font-size: 11px;
+    color: #666;
+    float: right;
+    padding: 4px 5px 0 0
+}
+
+.target-report-item-body {
+    margin: 5px 7px;
+}
+
+.target-report-item-body p {
+    font-size: 11px;
+}
+
+/*Item 선택시 사용할 css */
+.target-report .x-item-selected .target-report-item-header {
+    background: #829cbf;
+}
+
+.target-report .x-item-selected h3 {
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    float: left;
+    padding: 5px 10px 0 5px;
+}
+
+.target-report .x-item-selected h3 a {
+    color: #fff;
+    display: block;
+}
+
+.target-report .x-item-selected h3 a:hover {
+    color: #e1ecf2;
+}
+
+.target-report .x-item-selected .target-report-item-header span {
+    font-size: 11px;
+    color: #fff;
+    float: right;
+    padding: 4px 5px 0 0
+}
+
+.stat_view {
+    line-height: 1.5em;
+    font-family: Arial, Malgun Gothic, Dotum, sans-serif;
+    background: #F6F6F6;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    height: 80px;
+    margin-top: 8px
+}
+
+.view_site, .view_screen, .view_random, .view_fail {
+    width: 25%;
+    float: left;
+}
+
+.stat_view p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.stat_view p.percent {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 7px 0 0 0;
+    line-height: 24px
+}
+
+.stat_view p.percent span {
+    font-size: 12px;
+    margin: 7px 0 0 0;
+}
+
+.stat_view p.percent.red {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+    margin: 6px 0 0 0;
+    margin: 7px 0 0 0;
+}
+
+.stat_view p.percent.orange {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F60;
+    margin: 6px 0 0 0;
+    margin: 7px 0 0 0;
+}
+
+.stat_view p.count {
+    font-size: 10px;
+    font-weight: bold;
+    color: #333333;
+    line-height: 9px
+}
+
+.stat_view p.type {
+    font-size: 11px;
+    color: #666;
+    margin: 8px 2px;
+    line-height: 12px
+}
+
+.box {
+    background: #F6F6F6;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    height: 50px;
+    margin-top: 5px
+}
+
+.box p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.box p.num {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0 0 0;
+    line-height: 24px
+}
+
+.box p.type {
+    font-size: 11px;
+    color: #666;
+    margin: 5px 2px;
+    line-height: 8px
+}
+
+
+:-webkit-full-screen {
+    /* properties */
+}
+
+:-moz-full-screen {
+    /* properties */
+}
+
+:-ms-fullscreen {
+    /* properties */
+}
+
+:full-screen { /*pre-spec */
+    /* properties */
+}
+
+:fullscreen { /* spec */
+    /* properties */
+}
+
+/* deeper elements */
+:-webkit-full-screen video {
+    width: 100%;
+    height: 100%;
+}
+
+/* styling the backdrop*/
+::backdrop {
+    /* properties */
+}
+::-ms-backdrop {
+    /* properties */
+}

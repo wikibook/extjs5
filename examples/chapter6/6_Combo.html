@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Table Layout</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ext/packages/ext-theme-gray/build/resources/ext-theme-gray-all-debug.css">
+    <script type="text/javascript" src="/ext/ext-all-debug.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        enabled: true,
+        paths: {
+            'ext5': '/app'
+        }
+    });
+    Ext.require([
+        'ext5.model.smpl.Code',
+        'ext5.view.chapter6.MyForm'
+    ]);
+
+    Ext.onReady(function () {
+        var fp = Ext.create('ext5.view.chapter6.MyForm', {
+            renderTo: document.body
+        });
+
+        var store = Ext.create('Ext.data.Store', {
+            model: 'ext5.model.smpl.Code'
+        });
+
+        fp.add({
+            xtype: 'combo',             // #1
+            name: 'code',              // #2
+            store: store,                // #3
+            fieldLabel: '콤보박스',
+            displayField: 'cd_desc',      // #4
+            valueField: 'cd_code',       // #5
+            queryMode: 'remote',      // #6 .
+            forceSelection: true,       // #7
+            typeAhead: true,          // #8
+            typeAheadDelay: 100,     // #9
+            minChars: 1,              // #10
+            hideTrigger: false          // #11
+        });
+    })
+
+</script>
+</body>
+</html>

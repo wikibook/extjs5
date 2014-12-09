@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HBox Layout</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ext/packages/ext-theme-gray/build/resources/ext-theme-gray-all-debug.css">
+    <script type="text/javascript" src="/ext/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        enabled: true,
+        paths: {
+            'ext5': '/app'
+        }
+    });
+    Ext.require([
+        'ext5.view.chapter3.HBoxLayout'
+    ]);
+
+    Ext.onReady(function () {
+//        Ext.create('ext5.view.chapter3.HBoxLayout', {
+//            renderTo : document.body
+//        });
+
+
+//        Ext.create('ext5.view.chapter3.HBoxLayout', {
+//            renderTo : document.body,
+//            layout : {
+//                type : 'hbox',
+//                align : 'stretchmax',
+//                padding : 10
+//            }
+//        });
+//
+//        // case2
+        Ext.create('ext5.view.chapter3.HBoxLayout', {
+            renderTo : document.body,
+            layout : {
+                type : 'hbox',
+                align : 'stretch',
+                padding : 10
+            }
+        });
+
+    })
+
+</script>
+</body>
+</html>

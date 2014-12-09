@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Table Layout</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ext/packages/ext-theme-gray/build/resources/ext-theme-gray-all-debug.css">
+    <script type="text/javascript" src="/ext/ext-all-debug.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        enabled: true,
+        paths: {
+            'ext5': '/app'
+        }
+    });
+    Ext.require([
+        'ext5.view.chapter6.MyForm'
+    ]);
+
+    Ext.onReady(function () {
+        var fp = Ext.create('ext5.view.chapter6.MyForm', {
+            renderTo: document.body
+        });
+
+        fp.add({
+            xtype: 'fieldcontainer',
+            fieldLabel: '리치텍스트에디터',
+            itemId: 'htmlfield1',
+            layout: 'anchor',
+            items: [
+                {
+                    xtype: 'htmleditor',
+                    name: 'bigcontent',
+                    anchor: '100%'
+                },
+                {
+                    anchor: '100%',
+                    style: {
+                        borderColor: '#000000',
+                        borderStyle: 'solid',
+                        borderWidth: '1px'
+                    },
+                    xtype: 'displayfield',
+                    itemId: 'bigcontent'
+                }
+            ]
+        });
+
+        var htmlcontainer = fp.down('container[itemId=htmlfield1]');
+        htmlcontainer.insert(0, {
+            xtype: 'toolbar',
+            items: [
+                '-',
+                {
+                    xtype: 'button',
+                    text: 'Save',
+                    handler: function (button) {
+                        // 클릭 이벤트를 구현하자.
+                        var myView = button.up('fieldcontainer');
+                        var bigcontent = myView.down('[itemId=bigcontent]');
+                        var myEditor = myView.down('[name=bigcontent]');
+                        if (button.getText() === "Save") {
+                            button.setText("Edit");
+                            bigcontent.setValue(myEditor.getValue());
+                            myEditor.hide();
+                            bigcontent.show();
+                        }else{
+                            button.setText("Save");
+                            myEditor.setValue(bigcontent.getValue());
+                            bigcontent.hide();
+                            myEditor.show();
+
+                        }
+                    }
+                }, '-'
+            ]
+        })
+    })
+
+</script>
+</body>
+</html>

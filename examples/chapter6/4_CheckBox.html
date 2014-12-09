@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Table Layout</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ext/packages/ext-theme-gray/build/resources/ext-theme-gray-all-debug.css">
+    <script type="text/javascript" src="/ext/ext-all-debug.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        enabled: true,
+        paths: {
+            'ext5': '/app'
+        }
+    });
+    Ext.require([
+        'ext5.view.chapter6.MyForm'
+    ]);
+
+    Ext.onReady(function () {
+        var fp = Ext.create('ext5.view.chapter6.MyForm', {
+            renderTo: document.body
+        });
+        fp.add({
+            xtype: 'checkboxgroup',             // #1
+            fieldLabel: '체크박스',
+            name: 'mobilephone',                // #2
+            columns: 3,                         // #3
+            items: [                            // #4
+                {
+                    xtype: 'checkbox',          // #5
+                    boxLabel: '아이폰4',
+                    name: 'ip4'                // #6
+                },
+                {
+                    boxLabel: '아이폰5',
+                    xtype: 'checkbox',
+                    name: 'mobilephone',
+                    inputValue: 'ip5'
+                },
+                {
+                    boxLabel: '갤럭시S',
+                    xtype: 'checkbox',
+                    name: 'mobilephone',
+                    inputValue: 'gs'
+                },
+                {
+                    boxLabel: '갤럭시노트',
+                    xtype: 'checkbox',
+                    name: 'mobilephone',
+                    inputValue: 'gnote'
+                },
+                {
+                    boxLabel: '베가',
+                    xtype: 'checkbox',
+                    name: 'mobilephone',
+                    inputValue: 'vega'
+                },
+                {
+                    boxLabel: 'G2',
+                    xtype: 'checkbox',
+                    name: 'mobilephone',
+                    inputValue: 'g2'
+                }
+            ]
+        });
+
+        var checkboxgroup = fp.down('checkboxgroup[name=mobilephone]');
+
+        checkboxgroup.setValue({
+            mobilephone: 'gs'
+        });
+
+        checkboxgroup.setValue({
+            ip4: true
+        });
+
+        checkboxgroup.setValue({
+            mobilephone: ['gs', 'g2'],
+            ip4: true
+        });
+
+    })
+
+</script>
+</body>
+</html>

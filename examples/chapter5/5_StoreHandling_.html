@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Table Layout</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ext/packages/ext-theme-gray/build/resources/ext-theme-gray-all-debug.css">
+    <script type="text/javascript" src="/ext/ext-all-debug.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        enabled: true,
+        paths: {
+            'ext5': '/app'
+        }
+    });
+    Ext.require([
+        'Ext.Component',
+        'ext5.model.ticket.User',
+        'ext5.model.ticket.Organization',
+        'ext5.model.ticket.Project',
+        'ext5.model.ticket.Group'
+    ]);
+
+    Ext.onReady(function () {
+        /***
+         * Step1 모델객체를 통해 스토어 입력
+         * @type {*}
+         */
+        /*var store = Ext.create('Ext.data.Store', {
+            model: 'ext5.model.ticket.User',
+            autoLoad: false
+        });
+        var user = Ext.create('ext5.model.ticket.User', {
+            name: "이순신",
+            projectId: 2,
+            organizationId: 1
+        });
+        store.add(user);
+        store.insert(0, {
+            name: "홍길동",
+            projectId: 2,
+            organizationId: 1
+        });
+
+        var arrayModel = [];        // #2
+        for(var i=0; i<5; i++){    // #3
+            arrayModel.push({ // #4
+                name: "홍길동"+i,
+                projectId: 2,
+                organizationId: 1
+            });
+        }
+        store.add(arrayModel);  // #6
+
+        // 신규 입력된 건을 찾는다.
+        var newRecords = store.getNewRecords();
+        Ext.each(newRecords,function(record, index){
+            console.log(record.data, index);
+        });
+
+        // 서버에 입력된 데이터를 전달한다.
+        store.sync();*/
+
+
+        /***
+         * Step2 : Store의 수정
+         */
+        /*var store = Ext.create('Ext.data.Store', {
+            model: 'ext5.model.ticket.Group',
+            autoLoad: true
+        });
+        store.on('load', function(groups){
+            store.first().set('name', '영업');  // #1
+            var last = store.last();  // #2
+            last.set('organizationId', 2);
+
+            var updated = store.getUpdatedRecords(); //Step 3
+            Ext.each(updated,function(record,index){
+                console.log(record.getId(), record.data);
+            });
+            store.sync();
+        })*/
+
+        /***
+         * Step3 : Store의 삭제
+         */
+        var store = Ext.create('Ext.data.Store', {
+            model: 'ext5.model.ticket.Group',
+            autoLoad: true
+        });
+        store.on('load', function(groups){
+            var first = store.first(),          // #2
+                    last = store.last();
+            store.remove(first);        // #3
+            store.removeAt(3);            // #4
+            store.removeAll();             // #5
+            store.sync();
+        });
+
+    })
+
+</script>
+</body>
+</html>

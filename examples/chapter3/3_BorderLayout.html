@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Border Layout</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ext/packages/ext-theme-gray/build/resources/ext-theme-gray-all-debug.css">
+    <script type="text/javascript" src="/ext/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        enabled: true,
+        paths: {
+            'ext5': '/app'
+        }
+    });
+    Ext.require([
+        'ext5.view.chapter3.BorderLayout'
+    ]);
+    Ext.onReady(function () {
+        var border = Ext.create('ext5.view.chapter3.BorderLayout', {
+            renderTo: document.body
+        });
+        console.log(border.totalFlex, border.centerFlex)
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{"entitys": [
+    {
+        "cd_desc": "전기/전자",
+        "cd_code": "CD01"
+    },
+    {
+        "cd_desc": "금융/보험/회계/법무법인",
+        "cd_code": "CD02"
+    },
+    {
+        "cd_desc": "종교/동호회",
+        "cd_code": "CD13"
+    }
+], "success": true, "totalCount": "3", errMsg: "", errTitle: "검색결과"}
