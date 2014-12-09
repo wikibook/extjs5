@@ -13,10 +13,9 @@
 
 압축 해제된 폴더로 명령프롬프트로 이동해 아래 명령을 실행합니다.
 
--`"sencha app watch"` - 이 명령을 통해 개발 모드로 앱 설정 등을 읽어 웹서버를 띄워 줍니다.
--`http://localhost:1841` - 이 명령은 위의 `sencha app watch` 명령에 의해 실행된 앱을 브라우저를 통해 실행합니다.
-
--`sencha app build` - 이 명령은 앱을 빌드(프로덕션)하는 명령으로 빌드가 완료되면 `sencha web start`명령을 통해 웹서버를 
+ -`sencha app watch` - 이 명령을 통해 개발 모드로 앱 설정 등을 읽어 웹서버를 띄워 줍니다.
+ -`http://localhost:1841` - 이 명령은 위의 `sencha app watch` 명령에 의해 실행된 앱을 브라우저를 통해 실행합니다.
+ -`sencha app build` - 이 명령은 앱을 빌드(프로덕션)하는 명령으로 빌드가 완료되면 `sencha web start`명령을 통해 웹서버를 
 실행해 빌드 결과를 확인할 수 있습니다. 빌드 결과물은 `http://localhost:1841/build/production/ext5`로 확인합니다.
 
 아래는 주요 폴더에 대한 설명입니다.
