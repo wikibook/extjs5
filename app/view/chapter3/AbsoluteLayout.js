@@ -1,6 +1,7 @@
 Ext.define('ext5.view.chapter3.AbsoluteLayout', {
     alias: 'widget.chapter3-absolutelayout',
     extend: 'Ext.panel.Panel',
+    requires: ['Ext.layout.container.Absolute'],
     height: 300,
     width: 300,
     padding : '5 5 5 5',

@@ -1,6 +1,7 @@
 Ext.define('ext5.view.chapter3.TableLayout', {
     alias: 'widget.chapter3-tablelayout',
     extend: 'Ext.panel.Panel',
+    requires: ['Ext.layout.container.Table'],
     title : 'Table Layout',
     width : 500,
     height : 300,
