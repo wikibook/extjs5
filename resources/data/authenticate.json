@@ -1,8 +1,0 @@
-{"entitys": [
-    {
-        "id": 1,
-        "name": "Don",
-        "projectId": 1,
-        "organizationId": 1
-    }
-], "success": true, "totalCount": "3", errMsg: "", errTitle: "검색결과"}
