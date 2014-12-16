@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Table Layout</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ext/packages/ext-theme-gray/build/resources/ext-theme-gray-all-debug.css">
+    <script type="text/javascript" src="/ext/ext-all-debug.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        enabled: true,
+        paths: {
+            'ext5': '/app'
+        }
+    });
+    Ext.require([
+        'ext5.model.Board'
+    ]);
+
+    Ext.onReady(function () {
+       var board = Ext.create('ext5.model.Board', {
+//           id: 1,
+           title: '안녕하세요^^',
+           userName: '홍길동',
+           content: '게시물 내용을 입력합니다.',
+           role: 'User',
+           deleteYn: false
+       });
+//       board.save({
+//            success: function (record, operation) {		// #1
+//                console.log('읽어온 데이터 레코드는 : ', record.data)
+//            },
+//            failure: function (record, options) {		// #2
+//                console.log('저장 실패');
+//            },
+//            callback: function () {				// #3
+//                console.log('콜백 처리 ');
+//            }
+//       });
+
+    var board = ext5.model.Board.load(33, {     // #1
+        success: function (record, operation) {	// #2
+            console.log('읽어온 데이터 레코드는 : ', record, operation)
+            record.erase({
+                success: function (record, operation) {
+                    console.log('삭제 후 서버에서 전달한 결과는 : ', record.data)
+                }
+            });
+        }
+    });
+
+
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+.main_dashboard .tab_bg {
+  background: #1b243d;
+  height: 40px;
+  border-top: 1px solid #3b465e;
+}
+
+.main_dashboard .dashboard_tab_menu {
+  /*width: 1000px;*/
+  margin: 0 auto;
+}
+
+.main_dashboard .dashboard_tab_menu {
+  overflow: hidden;
+  padding-top: 6px;
+}
+
+.main_dashboard .dashboard_tab_menu li {
+  list-style: none;
+  float: left;
+  width: 108px;
+  margin-left: 2px;
+}
+
+.main_dashboard .dashboard_tab_menu li:first-child {
+  margin-left: 0;
+}
+
+.main_dashboard .dashboard_tab_menu li a {
+  padding-top: 10px;
+  background: url('/resources/images/bg_tab.gif') repeat-x left bottom;
+  display: block;
+  height: 24px;
+  vertical-align: middle;
+  text-align: center;
+  color: #c6d8f1;
+  font-size: 12px;
+  font-family: Arial;
+}
+
+.dashboard_tab_menu li .exception {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.main_dashboard .dashboard_tab_menu li a.on {
+  background-position: left top;
+  color: #072b5a;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.custom-tab.x-border-box * {
+  box-sizing: border-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}

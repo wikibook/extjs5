@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Class Static</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ext/packages/ext-theme-gray/build/resources/ext-theme-gray-all-debug.css">
+    <script type="text/javascript" src="/ext/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        enabled: true,
+        paths: {
+            'ext5': '/app'
+        }
+    });
+    Ext.require([
+        'ext5.view.chapter2.ClassStatic'
+    ]);
+    Ext.onReady(function () {
+        var myWindow = Ext.create('ext5.view.chapter2.ClassStatic', {
+            title: '안녕하세요 ^^',
+            renderTo: document.body,
+            bottomBar: {
+                height: 60
+            }
+        });
+        var static1 = ext5.view.chapter2.ClassStatic.student('홍길동');
+        var static2 = ext5.view.chapter2.ClassStatic.student('김철수');
+        console.log(static2.getStudentName());
+        console.log(ext5.view.chapter2.ClassStatic.studentCount);
+    })
+
+</script>
+</body>
+</html>

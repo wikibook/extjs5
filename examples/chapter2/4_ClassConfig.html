@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>4_ClassConfig</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ext/packages/ext-theme-gray/build/resources/ext-theme-gray-all-debug.css">
+    <script type="text/javascript" src="/ext/ext-all-debug.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        enabled: true,
+        paths: {
+            'ext5': '/app'
+        }
+    });
+    Ext.require([
+        'ext5.view.chapter2.ClassConfig'
+    ]);
+    Ext.onReady(function () {
+        var myWindow = Ext.create('ext5.view.chapter2.ClassConfig', {
+            subject: '안녕하세요 ^^',      // #1
+            renderTo: document.body,
+            bottomBar: {    // #2
+                height: 60
+            }
+        });
+        console.log(myWindow.getSubject()); // #3
+        myWindow.setSubject('반갑습니다.^^');  // #4
+        console.log(myWindow.getSubject()); // #5
+        myWindow.setSubject(null); // #6
+        myWindow.setBottomBar({ height: 100 }); // #7
+        console.log(myWindow.getBottomBar().getHeight()); // #8
+    })
+
+</script>
+</body>
+</html>

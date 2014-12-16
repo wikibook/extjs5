@@ -1,0 +1,22 @@
+{"entitys": [
+    {
+        "tabIdx": 1,
+        "tabCls": "on",
+        "tabName": "1번 탭"
+    },
+    {
+        "tabIdx": 2,
+        "tabCls": "",
+        "tabName": "2번 탭"
+    },
+    {
+        "tabIdx": 3,
+        "tabCls": "",
+        "tabName": "3번 탭"
+    },
+    {
+        "tabIdx": 4,
+        "tabCls": "",
+        "tabName": "4번 탭"
+    }
+], "errMsg": "", "errTitle": "검색결과", "message": "", "success": true, "totalCount": "4"}

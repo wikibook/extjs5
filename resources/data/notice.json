@@ -1,0 +1,20 @@
+{"entitys": [
+    {
+        "content": "로그인 시 기존 계정정보를 쿠키에 저장하도록 구현함.",
+        "noticeId": 75,
+        "subject": "공지사항 (ExtJS 5.0 출시)",
+        "crUserSeq": 1,
+        "deleted": 0,
+        "crDate": "2014-05-11 20:05:02",
+        "chDate": "2014-05-29 15:44:32"
+    },
+    {
+        "content": "게시물 2.",
+        "noticeId": 75,
+        "subject": "두번째 게시물",
+        "crUserSeq": 1,
+        "deleted": 0,
+        "crDate": "2014-05-11 20:05:02",
+        "chDate": "2014-05-29 15:44:32"
+    }
+], "errMsg": "", "errTitle": "검색결과", "id": 0, "message": "", "success": true, "totalCount": "2"}

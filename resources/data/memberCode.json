@@ -1,0 +1,37 @@
+{
+    "success": true,
+    "errMsg": "",
+    "errTitle": "",
+    items: [
+        {
+            codeNm: "코드없음",
+            codeCd: true,
+            grpCd: "G000",
+            grpNm: "값없음"
+        },
+        {
+            codeNm: "회원구매",
+            codeCd: true,
+            grpCd: "G001",      // #1
+            grpNm: "회원여부"
+        },
+        {
+            codeNm: "비회원구매",
+            codeCd: false,
+            grpCd: "G001",
+            grpNm: "회원여부"
+        },
+        {
+            codeNm: "up",
+            codeCd: "up",
+            grpCd: "G002",      // #2
+            grpNm: "고객평가"
+        },
+        {
+            codeNm: "down",
+            codeCd: "down",
+            grpCd: "G002",
+            grpNm: "고객평가"
+        }
+    ]
+}

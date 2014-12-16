@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Table Layout</title>
+    <link rel="stylesheet" type="text/css"
+          href="/ext/packages/ext-theme-gray/build/resources/ext-theme-gray-all-debug.css">
+    <script type="text/javascript" src="/ext/ext-all-debug.js"></script>
+    <style type="text/css">
+            /** Action Column 의 상하 정렬을 바꾸는 방법 */
+
+            /* case 원 css를 변경하는 방법
+            .x-action-col-cell {
+                vertical-align: middle;
+            }*/
+            /** case tdCls설정을 아래 CSS로 할 경우 **/
+        .my-action-col-cell{
+            vertical-align: middle;
+        }
+            /* action column 사이를 띄워준다.*/
+        .x-action-col-icon {
+            height: 16px;
+            width: 16px;
+            margin-right: 8px;
+        }
+
+            /*<!--Step 3에서 metaData.css를 설명하기 위해 필요.-->*/
+        .thumb-up{
+            background:url(/resources/images/up.png) 20px no-repeat !important;
+        }
+        .thumb-down {
+            background:url(/resources/images/down.png) 20px no-repeat !important;
+        }
+        .x-grid-mygroup-hd {
+            padding: 4px 4px 4px 4px !important;
+            border-width: 0 0 2px 0;
+            border-style: none !important;
+            border-color: #bcb1b0;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    Ext.Loader.setConfig({
+        enabled: true,
+        paths: {
+            'ext5': '/app'
+        }
+    });
+    Ext.require([
+        'ext5.view.chapter7.SelectionModelGrid'
+    ]);
+
+    Ext.onReady(function () {
+        var fp = Ext.create('ext5.view.chapter7.SelectionModelGrid', {
+            renderTo: document.body
+        });
+    });
+</script>
+</body>
+</html>
