@@ -21,7 +21,7 @@ Ext.define('ext5.view.chapter4.CustomTab', {
         var tpl = Ext.DomHelper.createTemplate(html);				// #3
 
         Ext.Ajax.request({							// #4
-            url: "resources/data/tablist.json",							// #5
+            url: "../../resources/data/tablist.json",							// #5
             method: "GET",
             success: function (result, request) {
                 var obj = Ext.JSON.decode(result.responseText);			// #6
