@@ -1,0 +1,7 @@
+{
+       success: true,
+       departments: [
+           {code: 'FIN', name: 'Finance',    location: 'Hyderabad'},
+           {code: 'SAL', name: 'Sales', location: 'Hyderabad'},
+           {code: 'DEV', name: 'Development', location: 'Agra'}
+]}

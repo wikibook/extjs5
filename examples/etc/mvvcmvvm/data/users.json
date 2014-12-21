@@ -1,0 +1,10 @@
+{
+    success: true,
+    users: [
+        {id: 1, name: 'Sunil',email: 'sunil@wtc.com',   department:'FIN'},
+           {id: 2, name: 'Sujit', email: 'sujit@wtc.com',   department:'FIN'},
+           {id: 3, name: 'Alok', email: 'alok@wtc.com',   department:'DEV'},
+           {id: 4, name: 'Pradeep', email: 'pradeep@wtc.com',   department:'SAL'},
+           {id: 5, name: 'Ajit', email: 'ajit@wtc.com',   department:'DEV'}
+       ]
+}
