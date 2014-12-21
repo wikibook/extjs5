@@ -12,10 +12,6 @@ Ext.define('AM.controller.Departments',{
 		});
 	},
 
-
-
-
-
 	showDepartmentUser : function(grid, model, itemEl, idx, e, eOpts){
 		var app = this.application;
 		app.fireEvent('departmentselected', grid, app, model);

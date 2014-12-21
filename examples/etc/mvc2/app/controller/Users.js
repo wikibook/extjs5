@@ -16,7 +16,7 @@ Ext.define('AM.controller.Users', {
 
     init: function (app) {
         this.control({
-            'userlist dataview': {
+            'userlist': {
                 itemdblclick: this.editUser
             },
             'useredit button[action=save]': {
